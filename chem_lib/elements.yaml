@@ -1,0 +1,1091 @@
+# density is in grams per cubic centimeter
+"H":
+    name: Hydrogen
+    protons: 1
+    weight: 1.008
+    charges: [ 1 ] 
+    group_number: 1
+    period_number: 1
+    electron_configuration: 1s1
+    density: 0.00008988
+    classification: non_metal
+"He":
+    name: Helium
+    protons: 2
+    weight: 4.002602
+    charges: [ 0 ] 
+    group_number: 18
+    period_number: 1
+    electron_configuration: 1s2
+    density: 0.0001785
+    classification: noble_gas
+"Li":
+    name: Lithium
+    protons: 3
+    weight: 6.94
+    charges: [ 1 ] 
+    group_number: 1
+    period_number: 2
+    electron_configuration: "[He] 2s1"
+    density: 0.534
+    classification: alkaili_metal
+"Be":
+    name: Beryllium
+    protons: 4
+    weight: 9.0121831
+    charges: [ 2 ] 
+    group_number: 2
+    period_number: 2
+    electron_configuration: "[He] 2s2"
+    density: 1.85
+    classification: alkaline_earth_metal
+"B":
+    name: Boron
+    protons: 5
+    weight: 10.81
+    charges: [ -3 ,  3 ] 
+    group_number: 13
+    period_number: 2
+    electron_configuration: "[He] 2s2 2p1"
+    density: 2.34
+    classification: metaloid
+"C":
+    name: Carbon
+    protons: 6
+    weight: 12.011
+    charges: [ 4 ] 
+    group_number: 14
+    period_number: 2
+    electron_configuration: "[He] 2s2 2p2"
+    density: 2.267
+    classification: non_metal
+"N":
+    name: Nitrogen
+    protons: 7
+    weight: 14.007
+    charges: [ -3 ] 
+    group_number: 15
+    period_number: 2
+    electron_configuration: "[He] 2s2 2p3"
+    density: 0.0012506
+    classification: non_metal
+"O":
+    name: Oxygen
+    protons: 8
+    weight: 15.999
+    charges: [ -2 ] 
+    group_number: 16
+    period_number: 2
+    electron_configuration: "[He] 2s2 2p4"
+    density: 0.001429
+    classification: non_metal
+"F":
+    name: Fluorine
+    protons: 9
+    weight: 18.998403163
+    charges: [ -1 ] 
+    group_number: 17
+    period_number: 2
+    electron_configuration: "[He] 2s2 2p5"
+    density: 0.001696
+    classification: non_metal
+"Ne":
+    name: Neon
+    protons: 10
+    weight: 20.1797
+    charges: [ 0 ] 
+    group_number: 18
+    period_number: 2
+    electron_configuration: "[He] 2s2 2p6"
+    density: 0.0008999
+    classification: noble_gas
+"Na":
+    name: Sodium
+    protons: 11
+    weight: 22.98976928
+    charges: [ 1 ] 
+    group_number: 1
+    period_number: 3
+    electron_configuration: "[Ne] 3s1"
+    density: 0.971
+    classification: alkaili_metal
+"Mg":
+    name: Magnesium
+    protons: 12
+    weight: 24.305
+    charges: [ 2 ] 
+    group_number: 2
+    period_number: 3
+    electron_configuration: "[Ne] 3s2"
+    density: 1.738
+    classification: alkaline_earth_metal
+"Al":
+    name: Aluminum
+    protons: 13
+    weight: 26.9815384
+    charges: [ 3 ] 
+    group_number: 13
+    period_number: 3
+    electron_configuration: "[Ne] 3s2 3p1"
+    density: 2.698
+    classification: post_transition_metal
+"Si":
+    name: Silicon
+    protons: 14
+    weight: 28.085
+    charges: [ 4 ,  -4 ] 
+    group_number: 14
+    period_number: 3
+    electron_configuration: "[Ne] 3s2 3p2"
+    density: 2.3296
+    classification: metaloid
+"P":
+    name: Phosphorus
+    protons: 15
+    weight: 30.973761998
+    charges: [ 5 ,  3 ,  -3 ] 
+    group_number: 15
+    period_number: 3
+    electron_configuration: "[Ne] 3s2 3p3"
+    density: 1.82
+    classification: non_metal
+"S":
+    name: Sulfur
+    protons: 16
+    weight: 32.06
+    charges: [ -2 ,  2 ,  4 ,  6 ] 
+    group_number: 16
+    period_number: 3
+    electron_configuration: "[Ne] 3s2 3p4"
+    density: 2.067
+    classification: non_metal
+"Cl":
+    name: Chlorine
+    protons: 17
+    weight: 35.45
+    charges: [ -1 ] 
+    group_number: 17
+    period_number: 3
+    electron_configuration: "[Ne] 3s2 3p5"
+    density: 0.003214
+    classification: non_metal
+"Ar":
+    name: Argon
+    protons: 18
+    weight: 39.948
+    charges: [ 0 ] 
+    group_number: 18
+    period_number: 3
+    electron_configuration: "[Ne] 3s2 3p6"
+    density: 0.0017837
+    classification: noble_gas
+"K":
+    name: Potassium
+    protons: 19
+    weight: 39.0983
+    charges: [ 1 ] 
+    group_number: 1
+    period_number: 4
+    electron_configuration: "[Ar] 4s1"
+    density: 0.862
+    classification: alkaili_metal
+"Ca":
+    name: Calcium
+    protons: 20
+    weight: 40.078
+    charges: [ 2 ] 
+    group_number: 2
+    period_number: 4
+    electron_configuration: "[Ar] 4s2"
+    density: 1.54
+    classification: alkaline_earth_metal
+"Sc":
+    name: Scandium
+    protons: 21
+    weight: 44.955908
+    charges: [ 3 ] 
+    group_number: 3
+    period_number: 4
+    electron_configuration: "[Ar] 3d1 4s2"
+    density: 2.989
+    classification: transition_metal
+"Ti":
+    name: Titanium
+    protons: 22
+    weight: 47.867
+    charges: [ 4 ,  3 ] 
+    group_number: 4
+    period_number: 4
+    electron_configuration: "[Ar] 3d2 4s2"
+    density: 4.54
+    classification: transition_metal
+"V":
+    name: Vanadium
+    protons: 23
+    weight: 50.9415
+    charges: [ 2 ,  3 ,  4 ,  5 ] 
+    group_number: 5
+    period_number: 4
+    electron_configuration: "[Ar] 3d3 4s2"
+    density: 6.11
+    classification: transition_metal
+"Cr":
+    name: Chromium
+    protons: 24
+    weight: 51.9961
+    charges: [ 2 ,  3 ,  6 ] 
+    group_number: 6
+    period_number: 4
+    electron_configuration: "[Ar] 3d5 4s1"
+    density: 7.15
+    classification: transition_metal
+"Mn":
+    name: Manganese
+    protons: 25
+    weight: 54.938043
+    charges: [ 2 ,  4 ,  7 ] 
+    group_number: 7
+    period_number: 4
+    electron_configuration: "[Ar] 3d5 4s2"
+    density: 7.44
+    classification: transition_metal
+"Fe":
+    name: Iron
+    protons: 26
+    weight: 55.845
+    charges: [ 2 ,  3 ] 
+    group_number: 8
+    period_number: 4
+    electron_configuration: "[Ar] 3d6 4s2"
+    density: 7.874
+    classification: transition_metal
+"Co":
+    name: Cobalt
+    protons: 27
+    weight: 58.933194
+    charges: [ 2 ,  3 ] 
+    group_number: 9
+    period_number: 4
+    electron_configuration: "[Ar] 3d7 4s2"
+    density: 8.86
+    classification: transition_metal
+"Ni":
+    name: Nickel
+    protons: 28
+    weight: 58.6934
+    charges: [ 2 ] 
+    group_number: 10
+    period_number: 4
+    electron_configuration: "[Ar] 3d8 4s2"
+    density: 8.912
+    classification: transition_metal
+"Cu":
+    name: Copper
+    protons: 29
+    weight: 63.546
+    charges: [ 1 ,  2 ] 
+    group_number: 11
+    period_number: 4
+    electron_configuration: "[Ar] 3d10 4s1"
+    density: 8.96
+    classification: transition_metal
+"Zn":
+    name: Zinc
+    protons: 30
+    weight: 65.38
+    charges: [ 2 ] 
+    group_number: 12
+    period_number: 4
+    electron_configuration: "[Ar] 3d10 4s2"
+    density: 7.134
+    classification: transition_metal
+"Ga":
+    name: Gallium
+    protons: 31
+    weight: 69.723
+    charges: [ 3 ] 
+    group_number: 13
+    period_number: 4
+    electron_configuration: "[Ar] 3d10 4s2 4p1"
+    density: 5.907
+    classification: post_transition_metal
+"Ge":
+    name: Germanium
+    protons: 32
+    weight: 72.630
+    charges: [ -4 ,  2 ,  4 ] 
+    group_number: 14
+    period_number: 4
+    electron_configuration: "[Ar] 3d10 4s2 4p2"
+    density: 5.323
+    classification: metaloid
+"As":
+    name: Arsenic
+    protons: 33
+    weight: 74.921595
+    charges: [ -3 ,  3 ,  5 ] 
+    group_number: 15
+    period_number: 4
+    electron_configuration: "[Ar] 3d10 4s2 4p3"
+    density: 5.776
+    classification: metaloid
+"Se":
+    name: Selenium
+    protons: 34
+    weight: 78.971
+    charges: [ -2 ,  4 ,  6 ] 
+    group_number: 16
+    period_number: 4
+    electron_configuration: "[Ar] 3d10 4s2 4p4"
+    density: 4.809
+    classification: non_metal
+"Br":
+    name: Bromine
+    protons: 35
+    weight: 79.904
+    charges: [ -1 ,  1 ,  5 ] 
+    group_number: 17
+    period_number: 4
+    electron_configuration: "[Ar] 3d10 4s2 4p5"
+    density: 3.122
+    classification: non_metal
+"Kr":
+    name: Krypton
+    protons: 36
+    weight: 83.798
+    charges: [ 0 ] 
+    group_number: 18
+    period_number: 4
+    electron_configuration: "[Ar] 3d10 4s2 4p6"
+    density: 0.003733
+    classification: noble_gas
+"Rb":
+    name: Rubidium
+    protons: 37
+    weight: 85.4678
+    charges: [ 1 ] 
+    group_number: 1
+    period_number: 5
+    electron_configuration: "[Kr] 5s1"
+    density: 1.532
+    classification: alkaili_metal
+"Sr":
+    name: Strontium
+    protons: 38
+    weight: 87.62
+    charges: [ 2 ] 
+    group_number: 2
+    period_number: 5
+    electron_configuration: "[Kr] 5s2"
+    density: 2.64
+    classification: alkaline_earth_metal
+"Y":
+    name: Yttrium
+    protons: 39
+    weight: 88.90584
+    charges: [ 3 ] 
+    group_number: 3
+    period_number: 5
+    electron_configuration: "[Kr] 4d1 5s2"
+    density: 4.469
+    classification: null
+"Zr":
+    name: Zirconium
+    protons: 40
+    weight: 91.224
+    charges: [ 4 ] 
+    group_number: 4
+    period_number: 5
+    electron_configuration: "[Kr] 4d2 5s2"
+    density: 6.506
+    classification: null
+"Nb":
+    name: Niobium
+    protons: 41
+    weight: 92.90637
+    charges: [ 3 ,  5 ] 
+    group_number: 5
+    period_number: 5
+    electron_configuration: "[Kr] 4d4 5s1"
+    density: 8.57
+    classification: null
+"Mo":
+    name: Molybdenum
+    protons: 42
+    weight: 95.95
+    charges: [ 3 ,  6 ] 
+    group_number: 6
+    period_number: 5
+    electron_configuration: "[Kr] 4d5 5s1"
+    density: 10.22
+    classification: null
+"Tc":
+    name: Technetium
+    protons: 43
+    weight: null
+    charges: [ 6 ] 
+    group_number: 7
+    period_number: 5
+    electron_configuration: "[Kr] 4d5 5s2"
+    density: 11.5
+    classification: null
+"Ru":
+    name: Ruthenium
+    protons: 44
+    weight: 101.07
+    charges: [ 3 ,  4 ,  8 ] 
+    group_number: 8
+    period_number: 5
+    electron_configuration: "[Kr] 4d7 5s1"
+    density: 12.37
+    classification: null
+"Rh":
+    name: Rhodium
+    protons: 45
+    weight: 102.90549
+    charges: [ 4 ] 
+    group_number: 9
+    period_number: 5
+    electron_configuration: "[Kr] 4d8 5s1"
+    density: 12.41
+    classification: null
+"Pd":
+    name: Palladium
+    protons: 46
+    weight: 106.42
+    charges: [ 2 ,  4 ] 
+    group_number: 10
+    period_number: 5
+    electron_configuration: "[Kr] 4d10"
+    density: 12.02
+    classification: null
+"Ag":
+    name: Silver
+    protons: 47
+    weight: 107.8682
+    charges: [ 1 ] 
+    group_number: 11
+    period_number: 5
+    electron_configuration: "[Kr] 4d10 5s1"
+    density: 10.501
+    classification: null
+"Cd":
+    name: Cadmium
+    protons: 48
+    weight: 112.414
+    charges: [ 2 ] 
+    group_number: 12
+    period_number: 5
+    electron_configuration: "[Kr] 4d10 5s2"
+    density: 8.69
+    classification: null
+"In":
+    name: Indium
+    protons: 49
+    weight: 114.818
+    charges: [ 3 ] 
+    group_number: 13
+    period_number: 5
+    electron_configuration: "[Kr] 4d10 5s2 5p1"
+    density: 7.31
+    classification: null
+"Sn":
+    name: Tin
+    protons: 50
+    weight: 118.710
+    charges: [ 2 ,  4 ] 
+    group_number: 14
+    period_number: 5
+    electron_configuration: "[Kr] 4d10 5s2 5p2"
+    density: 7.287
+    classification: null
+"Sb":
+    name: Antimony
+    protons: 51
+    weight: 121.760
+    charges: [ -3 ,  3 ,  5 ] 
+    group_number: 15
+    period_number: 5
+    electron_configuration: "[Kr] 4d10 5s2 5p3"
+    density: 6.685
+    classification: metaloid
+"Te":
+    name: Tellurium
+    protons: 52
+    weight: 127.60
+    charges: [ -2 ,  4 ,  6 ] 
+    group_number: 16
+    period_number: 5
+    electron_configuration: "[Kr] 4d10 5s2 5p4"
+    density: 6.232
+    classification: metaloid
+"I":
+    name: Iodine
+    protons: 53
+    weight: 126.90447
+    charges: [ -1 ] 
+    group_number: 17
+    period_number: 5
+    electron_configuration: "[Kr] 4d10 5s2 5p5"
+    density: 4.93
+    classification: non_metal
+"Xe":
+    name: Xenon
+    protons: 54
+    weight: 131.293
+    charges: [ 0 ] 
+    group_number: 18
+    period_number: 5
+    electron_configuration: "[Kr] 4d10 5s2 5p6"
+    density: 0.005887
+    classification: noble_gas
+"Cs":
+    name: Cesium
+    protons: 55
+    weight: 132.90545196
+    charges: [ 1 ] 
+    group_number: 1
+    period_number: 6
+    electron_configuration: "[Xe] 6s1"
+    density: 1.873
+    classification: alkaili_metal
+"Ba":
+    name: Barium
+    protons: 56
+    weight: 137.327
+    charges: [ 2 ] 
+    group_number: 2
+    period_number: 6
+    electron_configuration: "[Xe] 6s2"
+    density: 3.594
+    classification: alkaline_earth_metal
+"La":
+    name: Lanthanum
+    protons: 57
+    weight: 138.90547
+    charges: [ 3 ] 
+    group_number: 3
+    period_number: 6
+    electron_configuration: "[Xe] 5d1 6s2"
+    density: 6.145
+    classification: null
+"Ce":
+    name: Cerium
+    protons: 58
+    weight: 140.116
+    charges: [ 3 ,  4 ] 
+    group_number: 101
+    period_number: 6
+    electron_configuration: "[Xe] 4f1 5d1 6s2"
+    density: 6.77
+    classification: null
+"Pr":
+    name: Praseodymium
+    protons: 59
+    weight: 140.90766
+    charges: [ 3 ] 
+    group_number: 101
+    period_number: 6
+    electron_configuration: "[Xe] 4f3 6s2"
+    density: 6.773
+    classification: null
+"Nd":
+    name: Neodymium
+    protons: 60
+    weight: 144.242
+    charges: [ 3 ,  4 ] 
+    group_number: 101
+    period_number: 6
+    electron_configuration: "[Xe] 4f4 6s2"
+    density: 7.007
+    classification: null
+"Pm":
+    name: Promethium
+    protons: 61
+    weight: null
+    charges: [ 3 ] 
+    group_number: 101
+    period_number: 6
+    electron_configuration: "[Xe] 4f5 6s2"
+    density: 7.26
+    classification: null
+"Sm":
+    name: Samarium
+    protons: 62
+    weight: 150.36
+    charges: [ 3 ] 
+    group_number: 101
+    period_number: 6
+    electron_configuration: "[Xe] 4f6 6s2"
+    density: 7.52
+    classification: null
+"Eu":
+    name: Europium
+    protons: 63
+    weight: 151.964
+    charges: [ 3 ] 
+    group_number: 101
+    period_number: 6
+    electron_configuration: "[Xe] 4f7 6s2"
+    density: 5.243
+    classification: null
+"Gd":
+    name: Gadolinium
+    protons: 64
+    weight: 157.25
+    charges: [ 3 ] 
+    group_number: 101
+    period_number: 6
+    electron_configuration: "[Xe] 4f7 5d1 6s2"
+    density: 7.895
+    classification: null
+"Tb":
+    name: Terbium
+    protons: 65
+    weight: 158.925354
+    charges: [ 3 ,  4 ] 
+    group_number: 101
+    period_number: 6
+    electron_configuration: "[Xe] 4f9 6s2"
+    density: 8.229
+    classification: null
+"Dy":
+    name: Dysprosium
+    protons: 66
+    weight: 162.500
+    charges: [ 3 ] 
+    group_number: 101
+    period_number: 6
+    electron_configuration: "[Xe] 4f10 6s2"
+    density: 8.55
+    classification: null
+"Ho":
+    name: Holmium
+    protons: 67
+    weight: 164.930328
+    charges: [ 3 ] 
+    group_number: 101
+    period_number: 6
+    electron_configuration: "[Xe] 4f11 6s2"
+    density: 8.795
+    classification: null
+"Er":
+    name: Erbium
+    protons: 68
+    weight: 167.259
+    charges: [ 3 ] 
+    group_number: 101
+    period_number: 6
+    electron_configuration: "[Xe] 4f12 6s2"
+    density: 9.066
+    classification: null
+"Tm":
+    name: Thulium
+    protons: 69
+    weight: 168.934218
+    charges: [ 3 ] 
+    group_number: 101
+    period_number: 6
+    electron_configuration: "[Xe] 4f13 6s2"
+    density: 9.321
+    classification: null
+"Yb":
+    name: Ytterbium
+    protons: 70
+    weight: 173.045
+    charges: [ 3 ] 
+    group_number: 101
+    period_number: 6
+    electron_configuration: "[Xe] 4f14 6s2"
+    density: 6.965
+    classification: null
+"Lu":
+    name: Lutetium
+    protons: 71
+    weight: 174.9668
+    charges: [ 3 ] 
+    group_number: 101
+    period_number: 6
+    electron_configuration: "[Xe] 4f14 5d1 6s2"
+    density: 9.84
+    classification: null
+"Hf":
+    name: Hafnium
+    protons: 72
+    weight: 178.49
+    charges: [ 4 ] 
+    group_number: 4
+    period_number: 6
+    electron_configuration: "[Xe] 4f14 5d2 6s2"
+    density: 13.31
+    classification: null
+"Ta":
+    name: Tantalum
+    protons: 73
+    weight: 180.94788
+    charges: [ 5 ] 
+    group_number: 5
+    period_number: 6
+    electron_configuration: "[Xe] 4f14 5d3 6s2"
+    density: 16.654
+    classification: null
+"W":
+    name: Tungsten
+    protons: 74
+    weight: 183.84
+    charges: [ 6 ] 
+    group_number: 6
+    period_number: 6
+    electron_configuration: "[Xe] 4f14 5d4 6s2"
+    density: 19.25
+    classification: null
+"Re":
+    name: Rhenium
+    protons: 75
+    weight: 186.207
+    charges: [ 2 ,  4 ,  6 ,  7 ] 
+    group_number: 7
+    period_number: 6
+    electron_configuration: "[Xe] 4f14 5d5 6s2"
+    density: 21.02
+    classification: null
+"Os":
+    name: Osmium
+    protons: 76
+    weight: 190.23
+    charges: [ 3 ,  4 ,  6 ,  8 ] 
+    group_number: 8
+    period_number: 6
+    electron_configuration: "[Xe] 4f14 5d6 6s2"
+    density: 22.61
+    classification: null
+"Ir":
+    name: Iridium
+    protons: 77
+    weight: 192.217
+    charges: [ 3 ,  4 ,  6 ] 
+    group_number: 9
+    period_number: 6
+    electron_configuration: "[Xe] 4f14 5d7 6s2"
+    density: 22.56
+    classification: null
+"Pt":
+    name: Platinum
+    protons: 78
+    weight: 195.084
+    charges: [ 2 ,  4 ,  6 ] 
+    group_number: 10
+    period_number: 6
+    electron_configuration: "[Xe] 4f14 5d9 6s1"
+    density: 21.46
+    classification: null
+"Au":
+    name: Gold
+    protons: 79
+    weight: 196.966570
+    charges: [ 1 ,  2 ,  3 ] 
+    group_number: 11
+    period_number: 6
+    electron_configuration: "[Xe] 4f14 5d10 6s1"
+    density: 19.282
+    classification: null
+"Hg":
+    name: Mercury
+    protons: 80
+    weight: 200.592
+    charges: [ 1 ,  2 ] 
+    group_number: 12
+    period_number: 6
+    electron_configuration: "[Xe] 4f14 5d10 6s2"
+    density: 13.5336
+    classification: null
+"Tl":
+    name: Thallium
+    protons: 81
+    weight: 204.38
+    charges: [ 1 ,  3 ] 
+    group_number: 13
+    period_number: 6
+    electron_configuration: "[Xe] 4f14 5d10 6s2 6p1"
+    density: 11.85
+    classification: post_transition_metal
+"Pb":
+    name: Lead
+    protons: 82
+    weight: 207.2
+    charges: [ 2 ,  4 ] 
+    group_number: 14
+    period_number: 6
+    electron_configuration: "[Xe] 4f14 5d10 6s2 6p2"
+    density: 11.342
+    classification: post_transition_metal
+"Bi":
+    name: Bismuth
+    protons: 83
+    weight: 208.98040
+    charges: [ 3 ] 
+    group_number: 15
+    period_number: 6
+    electron_configuration: "[Xe] 4f14 5d10 6s2 6p3"
+    density: 9.807
+    classification: post_transition_metal
+"Po":
+    name: Polonium
+    protons: 84
+    weight: null
+    charges: [ 2 ,  4 ] 
+    group_number: 16
+    period_number: 6
+    electron_configuration: "[Xe] 4f14 5d10 6s2 6p4"
+    density: 9.32
+    classification: post_transition_metal
+"At":
+    name: Astatine
+    protons: 85
+    weight: null
+    charges: null 
+    group_number: 17
+    period_number: 6
+    electron_configuration: "[Xe] 4f14 5d10 6s2 6p5"
+    density: 7
+    classification: metaloid
+"Rn":
+    name: Radon
+    protons: 86
+    weight: null
+    charges: [ 0 ] 
+    group_number: 18
+    period_number: 6
+    electron_configuration: "[Xe] 4f14 5d10 6s2 6p6"
+    density: 0.00973
+    classification: noble_gas
+"Fr":
+    name: Francium
+    protons: 87
+    weight: null
+    charges: null 
+    group_number: 1
+    period_number: 7
+    electron_configuration: "[Rn] 7s1"
+    density: 1.87
+    classification: alkaili_metal
+"Ra":
+    name: Radium
+    protons: 88
+    weight: null
+    charges: [ 2 ] 
+    group_number: 2
+    period_number: 7
+    electron_configuration: "[Rn] 7s2"
+    density: 5.5
+    classification: alkaline_earth_metal
+"Ac":
+    name: Actinium
+    protons: 89
+    weight: null
+    charges: [ 3 ] 
+    group_number: 3
+    period_number: 7
+    electron_configuration: "[Rn] 6d1 7s2"
+    density: 10.07
+    classification: null
+"Th":
+    name: Thorium
+    protons: 90
+    weight: 232.0377
+    charges: [ 4 ] 
+    group_number: 102
+    period_number: 7
+    electron_configuration: "[Rn] 6d2 7s2"
+    density: 11.72
+    classification: null
+"Pa":
+    name: Protactinium
+    protons: 91
+    weight: 231.03588
+    charges: [ 5 ] 
+    group_number: 102
+    period_number: 7
+    electron_configuration: "[Rn] 5f2 6d1 7s2"
+    density: 15.37
+    classification: null
+"U":
+    name: Uranium
+    protons: 92
+    weight: 238.02891
+    charges: [ 3 ,  4 ,  6 ] 
+    group_number: 102
+    period_number: 7
+    electron_configuration: "[Rn] 5f3 6d1 7s2"
+    density: 18.95
+    classification: null
+"Np":
+    name: Neptunium
+    protons: 93
+    weight: null
+    charges: null 
+    group_number: 102
+    period_number: 7
+    electron_configuration: "[Rn] 5f4 6d1 7s2"
+    density: 20.45
+    classification: null
+"Pu":
+    name: Plutonium
+    protons: 94
+    weight: null
+    charges: null 
+    group_number: 102
+    period_number: 7
+    electron_configuration: "[Rn] 5f6 7s2"
+    density: 19.84
+    classification: null
+"Am":
+    name: Americium
+    protons: 95
+    weight: null
+    charges: null 
+    group_number: 102
+    period_number: 7
+    electron_configuration: "[Rn] 5f7 7s2"
+    density: 13.69
+    classification: null
+"Cm":
+    name: Curium
+    protons: 96
+    weight: null
+    charges: null 
+    group_number: 102
+    period_number: 7
+    electron_configuration: null
+    density: 13.51
+    classification: null
+"Bk":
+    name: Berkelium
+    protons: 97
+    weight: null
+    charges: null 
+    group_number: 102
+    period_number: 7
+    electron_configuration: null
+    density: 14.79
+    classification: null
+"Cf":
+    name: Californium
+    protons: 98
+    weight: null
+    charges: null 
+    group_number: 102
+    period_number: 7
+    electron_configuration: null
+    density: 15.1
+    classification: null
+"Es":
+    name: Einsteinium
+    protons: 99
+    weight: null
+    charges: null 
+    group_number: 102
+    period_number: 7
+    electron_configuration: null
+    density: 8.84
+    classification: null
+"Fm":
+    name: Fermium
+    protons: 100
+    weight: null
+    charges: null 
+    group_number: 102
+    period_number: 7
+    electron_configuration: null
+    density: 9.7
+    classification: null
+"Md":
+    name: Mendelevium
+    protons: 101
+    weight: null
+    charges: null 
+    group_number: 102
+    period_number: 7
+    electron_configuration: null
+    density: 10.3
+    classification: null
+"No":
+    name: Nobelium
+    protons: 102
+    weight: null
+    charges: null 
+    group_number: 102
+    period_number: 7
+    electron_configuration: null
+    density: 9.9
+    classification: null
+"Lr":
+    name: Lawrencium
+    protons: 103
+    weight: null
+    charges: null 
+    group_number: 102
+    period_number: 7
+    electron_configuration: null
+    density: 15.6
+    classification: null
+"Rf":
+    name: Rutherfordium
+    protons: 104
+    weight: null
+    charges: null 
+    group_number: 4
+    period_number: 7
+    electron_configuration: null
+    density: 23.2
+    classification: null
+"Db":
+    name: Dubnium
+    protons: 105
+    weight: null
+    charges: null 
+    group_number: 5
+    period_number: 7
+    electron_configuration: null
+    density: 29.3
+    classification: null
+"Sg":
+    name: Seaborgium
+    protons: 106
+    weight: null
+    charges: null 
+    group_number: 6
+    period_number: 7
+    electron_configuration: null
+    density: 35.0
+    classification: null
+"Bh":
+    name: Bohrium
+    protons: 107
+    weight: null
+    charges: null 
+    group_number: 7
+    period_number: 7
+    electron_configuration: null
+    density: 37.1
+    classification: null
+"Hs":
+    name: Hassium
+    protons: 108
+    weight: null
+    charges: null 
+    group_number: 8
+    period_number: 7
+    electron_configuration: null
+    density: 40.7
+    classification: null
+"Mt":
+    name: Meitnerium
+    protons: 109
+    weight: null
+    charges: null 
+    group_number: 9
+    period_number: 7
+    electron_configuration: null
+    density: 37.4
+    classification: null
