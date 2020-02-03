@@ -2,7 +2,15 @@ require_relative "./units.rb"
 
 # BrINClHOF  # diatomic molecules
 
+Avogadro = 6.02214076*10**23
+
+def mol2atoms(mols)
+    return mols * Avogadro
+end
+
 class Molecule
+    attr_accessor :quantity
+    
     def initialize(info_hash)
         @quantity = 1
         @charge = nil
@@ -35,9 +43,9 @@ class Molecule
         end
     end
     
-    def mass()
+    def weight()
         if @sub_elements.is_a?(Array)
-            return @sub_elements.map(&:mass).sum * @quantity
+            return (@sub_elements.map(&:weight).sum) * @quantity
         end
     end
     
@@ -73,9 +81,9 @@ class Compound
         @sub_elements
     end
     
-    def mass()
+    def weight()
         if @sub_elements.is_a?(Array)
-            return @sub_elements.map(&:mass).sum * @quantity
+            return (@sub_elements.map(&:weight).sum) * @quantity
         end
     end
     
@@ -139,7 +147,7 @@ class Element < Molecule
         return [self]
     end
     
-    def mass()
+    def weight()
         return @info_hash["mass"] * @quantity
     end
     
