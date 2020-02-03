@@ -35,6 +35,12 @@ class Molecule
         end
     end
     
+    def mass()
+        if @sub_elements.is_a?(Array)
+            return @sub_elements.map(&:mass).sum * @quantity
+        end
+    end
+    
     def dup
         return self.class.new(@info_hash)
     end
@@ -65,6 +71,12 @@ class Compound
     
     def sub_elements
         @sub_elements
+    end
+    
+    def mass()
+        if @sub_elements.is_a?(Array)
+            return @sub_elements.map(&:mass).sum * @quantity
+        end
     end
     
     def imperical()
@@ -125,6 +137,10 @@ class Element < Molecule
     
     def sub_elements
         return [self]
+    end
+    
+    def mass()
+        return @info_hash["mass"] * @quantity
     end
     
     def to_s()
