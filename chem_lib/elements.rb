@@ -48,6 +48,11 @@ class Molecule
             return (@sub_elements.map(&:weight).sum) * @quantity
         end
     end
+    alias grams_per_mole weight
+    
+    def moles_per_gram()
+        1/self.weight
+    end
     
     def dup
         return self.class.new(@info_hash)
@@ -55,8 +60,9 @@ class Molecule
 end
 
 
-class Compound
-    def initialize(molecule_1, molecule_2)
+class Compound < Molecule
+    def initialize(*molecules)
+        molecule_1, molecule_2, *others = molecules
         @quantity = 1
         @charge = nil
         @sub_elements = []
@@ -70,6 +76,15 @@ class Compound
             @sub_elements += molecule_2.sub_elements
         else
             @sub_elements.push(molecule_2)
+        end
+        @sub_elements += others
+    end
+    
+    def *(other)
+        if other.is_a?(Numeric)
+            elem = self.class.new(*@sub_elements)
+            elem.quantity = other
+            return elem
         end
     end
     
@@ -172,7 +187,7 @@ end
 # charges 
 # 
     # +1
-    # ammonium NH*4
+    # ammonium NH4
 
     # -1
     # acetate : C2H3O2
@@ -192,16 +207,16 @@ end
     # thiocyanate : SCN
 
     # -2
-    # carbonate : CO32
-    # chromate : CrO42
-    # dichromate : Cr2O72
-    # hydrogen phosphate : HPO42
-    # peroxide : O22
-    # sulfate : SO42
-    # sulfite : SO32
-    # thiosulfate : S2O32
+    # carbonate : CO3
+    # chromate : CrO4
+    # dichromate : Cr2O7
+    # hydrogen phosphate : HPO4
+    # peroxide : O2
+    # sulfate : SO4
+    # sulfite : SO3
+    # thiosulfate : S2O3
 
     # -3
-    # borate : BO33
-    # phosphate : PO43
+    # borate : BO3
+    # phosphate : PO4
 
