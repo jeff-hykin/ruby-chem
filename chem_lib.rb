@@ -26,9 +26,28 @@ require_relative "./chem_lib/elements.rb"
 
 first = Si+O*2
 second = C
+
+def which_is_limiting(first_amount, first, second_amount,second, ratio:nil)
+    ratio_first_to_second = ratio
+    first_moles = first_amount / first.moles_per_gram
+    second_moles = second_amount / second.moles_per_gram
+
+    actual_ratio = first_moles / second_moles
+    
+    proportion_of_first = ratio_first_to_second / actual_ratio
+    proportion_of_second = actual_ratio / ratio_first_to_second
+    puts "proportion_of_first is: #{proportion_of_first} "
+    puts "proportion_of_second is: #{proportion_of_second} "
+    if actual_ratio < ratio_first_to_second
+        return { limiting: :first, leftover: proportion_of_second * second_amount }
+    else 
+        return { limiting: :second, leftover: proportion_of_first * first_amount }
+    end
+end
+
+puts which_is_limiting(260.grams, Si+O*2, 219.grams, C, ratio: 1/3)
 # puts first.weight
 
 # puts (Si+O*2)
 # puts C.weight
 
-puts 260.grams / first.moles_per_gram

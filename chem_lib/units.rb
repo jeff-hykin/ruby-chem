@@ -1,5 +1,7 @@
 # require 'atk_toolbox'
 
+require 'mathn' # fixes division
+
 # 
 # general rules
 # 
@@ -133,7 +135,7 @@ class NumericUnits < Numeric
     end
 
     def coerce(other)
-        [self.class.new(other,self.units), self]
+        [self.class.new(other,nil), self]
     end
 
     def <=>(other)
@@ -148,24 +150,24 @@ class NumericUnits < Numeric
     end
 
     def +(other)
-        if other.is_a?(NumericUnits) && other.units != self.units
+        if self.units != nil && other.is_a?(NumericUnits) && other.units != self.units
             raise "\n\nI'm not yet sure how to add two different units"
         else
-            return self.new_number(@number + other.number, self.units)
+            return self.new_number(@number + other.number, self.units||other.units)
         end
     end
 
     def -(other)
-        if other.is_a?(NumericUnits) && other.units != self.units
+        if self.units != nil && other.is_a?(NumericUnits) && other.units != self.units
             raise "\n\nI'm not yet sure how to subtract two different units"
         else
-            return self.new_number(@number - other.number, self.units)
+            return self.new_number(@number - other.number, self.units||other.units)
         end
     end
 
     def *(other)
         resulting_number = @number * other.number
-        if other.is_a?(NumericUnits)
+        if self.units != nil && other.is_a?(NumericUnits)
             if other.units.base_unit == self.units.base_unit
                 resulting_power = self.units.power + other.units.power
                 resulting_unit = PoweredUnit.new(self.units.base_unit, resulting_power)
@@ -186,13 +188,13 @@ class NumericUnits < Numeric
                 raise "\n\nI'm not yet sure how to multiply two different units"
             end
         else
-            return self.new_number(resulting_number, self.units)
+            return self.new_number(resulting_number, self.units||other.units)
         end
     end
 
     def /(other)
         resulting_number = @number / (0.0+other.number)
-        if other.is_a?(NumericUnits)
+        if self.units != nil && other.is_a?(NumericUnits)
             if other.units.base_unit == self.units.base_unit
                 resulting_power = self.units.power - other.units.power
                 if resulting_power == 0
@@ -205,7 +207,7 @@ class NumericUnits < Numeric
                 return self.new_number(resulting_number, PerUnit.new(self.units, other.units))
             end
         else
-            return self.new_number(resulting_number, self.units)
+            return self.new_number(resulting_number, self.units||other.units)
         end
     end
 end
