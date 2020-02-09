@@ -51,7 +51,7 @@ class Molecule
     alias grams_per_mole weight
     
     def moles_per_gram()
-        1.mol/self.weight
+        1/self.weight
     end
     
     def dup
@@ -163,11 +163,10 @@ class Element < Molecule
     end
     
     def weight()
-        return (@info_hash["mass"] * @quantity).grams
+        return (@info_hash["mass"] * @quantity).grams/1.mol
     end
     
     def to_s()
-        # TODO: print out quantity
         return "#{@symbol}#{@quantity if @quantity >= 2 }"
     end
 end

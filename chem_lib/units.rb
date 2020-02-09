@@ -62,6 +62,9 @@ class Numeric
     def number
         return self
     end
+    def to_percent
+        return "#{self * 100}%"
+    end
 end
 class NumericUnits < Numeric
     attr_accessor :units, :number
@@ -75,6 +78,9 @@ class NumericUnits < Numeric
         
         def to_s
             return "#{@base_unit}^#{@power}"
+        end
+        def ==(other)
+            return self.to_s == other.to_s
         end
     end
     
@@ -92,6 +98,9 @@ class NumericUnits < Numeric
         end
         def power
             return 1
+        end
+        def ==(other)
+            return self.to_s == other.to_s
         end
     end
     
@@ -184,12 +193,11 @@ class NumericUnits < Numeric
                         return self.new_number(resulting_number, PerUnit.new(other.units.top, PoweredUnit.new(self.units, new_power)))
                     end
                 end
-            else
-                raise "\n\nI'm not yet sure how to multiply two different units"
             end
         else
             return self.new_number(resulting_number, self.units||other.units)
         end
+        raise "\n\nI'm not yet sure how to multiply two different units:\nself:#{self}\nother:#{other}"
     end
 
     def /(other)
@@ -207,7 +215,11 @@ class NumericUnits < Numeric
                 return self.new_number(resulting_number, PerUnit.new(self.units, other.units))
             end
         else
-            return self.new_number(resulting_number, self.units||other.units)
+            units = self.units||other.units
+            if units.is_a?(PerUnit)
+                units = PerUnit.new(units.bottom, units.top)
+            end
+            return self.new_number(resulting_number, units)
         end
     end
 end
