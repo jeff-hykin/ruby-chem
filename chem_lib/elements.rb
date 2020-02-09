@@ -51,7 +51,7 @@ class Molecule
     alias grams_per_mole weight
     
     def moles_per_gram()
-        1/self.weight
+        1.mol/self.weight
     end
     
     def dup
@@ -163,7 +163,7 @@ class Element < Molecule
     end
     
     def weight()
-        return @info_hash["mass"] * @quantity
+        return (@info_hash["mass"] * @quantity).grams
     end
     
     def to_s()

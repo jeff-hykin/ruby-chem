@@ -24,30 +24,11 @@ require_relative "./chem_lib/elements.rb"
 # puts " mass: #{100 * grams_first / total_grams}"
 # puts " mass: #{100 * grams_second / total_grams}"
 
+first = Si+O*2
+second = C
+puts first.weight
 
+p (Si+O*2)
+p C.weight
 
-volume = 0.3
-molarity = 0.184 
-
-puts "Copper(II) Iodine weight is: #{ ( Cu+I*2 ).weight } "
-
-solute = volume * molarity
-puts "solute is: #{solute} "
-amount = solute * ( Cu+I*2 ).weight
-puts "amount is: #{amount} "
-
-
-grams = 18.6
-moles_per_gram = (Na*2 + S).moles_per_gram
-moles = grams * moles_per_gram
-liters = 0.375
-
-moles_per_liter = moles / liters
-grams_per_mole  = ( Fe*2 + (S+O*4)*3 ).weight
-
-
-grams_per_liter = moles_per_liter * grams_per_mole
-puts "grams_per_liter is: #{grams_per_liter} "
-puts "19.9/grams_per_liter is: #{19.9/grams_per_liter} "
-
-18.6 
+# puts 260.grams / first.moles_per_gram
