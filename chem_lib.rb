@@ -26,9 +26,9 @@ require_relative "./chem_lib/elements.rb"
 
 first = Si+O*2
 second = C
-puts first.weight
+# puts first.weight
 
-p (Si+O*2)
-p C.weight
+# puts (Si+O*2)
+# puts C.weight
 
-# puts 260.grams / first.moles_per_gram
+puts 260.grams / first.moles_per_gram

@@ -105,6 +105,10 @@ class NumericUnits < Numeric
         elsif unit.is_a?(PerUnit)
             if unit.top == unit.bottom
                 return number
+            elsif unit.bottom.is_a?(PerUnit) && unit.top == unit.bottom.bottom
+                return new_number(number, unit.bottom.top)
+            elsif unit.top.is_a?(PerUnit) && unit.top.top == unit.bottom
+                return new_number(number, unit.top.bottom)
             elsif unit.bottom == nil
                 return new_number(number, unit.top)
             end
