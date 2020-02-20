@@ -48,3 +48,10 @@ def percent_yeild(grams_of_first, first, grams_of_result, result, ratio:nil)
 end
 
 
+
+
+puts "N  :#{N.protons}" 
+puts "P  :#{P.protons}" 
+puts "As :#{As.protons}" 
+puts "Sb :#{Sb.protons}" 
+puts "Bi :#{Bi.protons}" 
