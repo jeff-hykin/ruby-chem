@@ -43,6 +43,12 @@ class Molecule
         end
     end
     
+    def valence_electrons()
+        if @sub_elements.is_a?(Array)
+            return (@sub_elements.map(&:valence_electrons).sum) * @quantity
+        end
+    end
+    
     def weight()
         if @sub_elements.is_a?(Array)
             return (@sub_elements.map(&:weight).sum) * @quantity
@@ -164,6 +170,27 @@ class Element < Molecule
     
     def weight()
         return (@info_hash["mass"] * @quantity).grams/1.mol
+    end
+    
+    def valence_electrons()
+        # helium is an exception
+        if @symbol == "He"
+            return 2
+        elsif group_number < 3
+            return group_number
+        elsif group_number > 12
+            return group_number - 10
+        # bunch of edgecases for transition metals so just look it up
+        else
+            if not @info_hash["valence_shells"]
+                raise "\n\nTried to get electron_configuration for #{self} but there wasn't one in the database"
+            end
+            # add up all the electrons for each of the valence shells
+            electrons_per_shell = @info_hash["valence_shells"].map do |each|
+                each.match(/\d+\z/)[0].to_i
+            end
+            return electrons_per_shell.sum
+        end
     end
     
     def to_s()

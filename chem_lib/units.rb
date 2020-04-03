@@ -65,6 +65,12 @@ class Numeric
     def to_percent
         return "#{self * 100}%"
     end
+    def to_scientific
+        "%E" % self
+    end
+    def percent
+        return self / 100
+    end
 end
 class NumericUnits < Numeric
     attr_accessor :units, :number
@@ -272,6 +278,13 @@ UNITS[:meters] = {
     }
 }
 
+UNITS[:nanometers] = {
+    abbreviation: :nm,
+    convertable_to: {
+        centimeters: ->(nanometers){nanometers/10**9},
+    }
+}
+
 UNITS[:grams] = {
     abbreviation: :g,
     convertable_to: {
@@ -301,3 +314,6 @@ UNITS[:moles] = {
 
 # TODO: add temperature
 # TODO: add liters
+
+
+
