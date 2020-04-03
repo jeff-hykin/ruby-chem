@@ -103,6 +103,4 @@ end
 
 
 
-
-
-puts (Fe+C).valence_electrons 
+puts (C+O*2).valence_electrons 
