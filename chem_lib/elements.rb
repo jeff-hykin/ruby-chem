@@ -63,6 +63,27 @@ class Molecule
     def dup
         return self.class.new(@info_hash)
     end
+    
+    def bond_type()
+        if not @sub_elements.is_a?(Array)
+            raise <<-HEREDOC.remove_indent
+                
+                
+                Asking for a bond_type on a single element
+            HEREDOC
+        end
+        
+        first_element = @sub_elements[0].info_hash["electronegativity"] 
+        second_element = @sub_elements[1].info_hash["electronegativity"]
+        difference = (first_element - second_element).abs
+        if difference <= 0.4
+            return :non_polar_covalent
+        elsif difference <= 1.9
+            return :polar_covalent
+        else
+            return :ionic
+        end
+    end
 end
 
 
@@ -119,7 +140,7 @@ class Compound < Molecule
 end
 
 class Element < Molecule
-    attr_accessor :quantity, :charge
+    attr_accessor :quantity, :charge, :info_hash
     
     # TODO:
     #   ion
@@ -171,6 +192,7 @@ class Element < Molecule
     def weight()
         return (@info_hash["mass"] * @quantity).grams/1.mol
     end
+    alias grams_per_mole weight
     
     def valence_electrons()
         output = 0
