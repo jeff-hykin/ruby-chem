@@ -103,4 +103,161 @@ end
 
 
 
-puts (C+O*2).valence_electrons 
+
+
+# # determine the heat capacity of the calorimeter
+# # In the laboratory a student burns a 0.750-g sample of adipic acid (C6H10O4) in a bomb calorimeter containing 1150. g of water. The temperature increases from 24.50 °C to 27.00 °C. The heat capacity of water is 4.184 J g-1°C-1.
+# # The molar heat of combustion is −2796 kJ per mole of adipic acid.
+# # C6H10O4(s) + 13/2 O2(g) 6 CO2(g) + 5 H2O(l) + Energy
+# # Calculate the heat capacity of the calorimeter.
+
+# C6H10O4 = {
+#     mass: 0.750,
+#     molar_heat: -2796,
+#     grams_per_mol: (C*6 + H*10 + O*4).grams_per_mole
+# } 
+# water = {
+#     mass: 1150,
+#     start_temp: 24.50,
+#     end_temp: 27.00,
+#     heat_capacity: 4.184,
+#     temp_change: ->(){ water[:end_temp] - water[:start_temp] },
+#     energy: ->() { water[:mass] * water[:heat_capacity] * water[:temp_change][] }
+# }
+
+# # The molar heat of combustion is −2796 kJ per mole of adipic acid.
+# # C6H10O4(s) + 13/2 O2(g) 6 CO2(g) + 5 H2O(l) + Energy
+# # Calculate the heat capacity of the calorimeter.
+# conversion_factor = 1000
+# heat_evolved = C6H10O4[:molar_heat] * (1/C6H10O4[:grams_per_mol]) * C6H10O4[:mass] * conversion_factor
+# heat_absorbed = - (heat_evolved + water[:energy][] )
+
+# heat_capacity = heat_absorbed / water[:temp_change][]
+
+# puts heat_capacity
+
+
+
+# # calculate the molar heat of combustion
+# # In an experiment, a 0.4419 g sample of bisphenol A (C15H16O2) is burned completely in a bomb calorimeter. The calorimeter is surrounded by 1.361×103 g of water. During the combustion the temperature increases from 27.04 to 29.44 °C. The heat capacity of water is 4.184 J g-1°C-1.
+# # The heat capacity of the calorimeter was determined in a previous experiment to be 865.6 J/°C.
+# # Assuming that no energy is lost to the surroundings, calculate the molar heat of combustion of bisphenol A based on these data.
+# # C15H16O2(s) + 18O2(g)  8 H2O(l) + 15 CO2(g) + Energy
+# total_heat = nil
+
+# C15H16O2 = {
+#     mass: 0.4419,
+#     grams_per_mol: (C*15 + H*16 + O*2).grams_per_mole,
+#     molar_heat: :unknown,
+#     heat_per_gram: ->() { (total_heat / C15H16O2[:mass]) /1000 }
+# } 
+# water = {
+#     mass: 1.361*(10**3),
+#     start_temp: 27.04,
+#     end_temp: 29.44,
+#     heat_capacity: 4.184,
+#     temp_change: ->(){ water[:end_temp] - water[:start_temp] },
+#     energy_change: ->() { water[:mass] * water[:heat_capacity] * water[:temp_change][] }
+# }
+# calorimeter = {
+#     heat_capacity: 865.6,
+#     start_temp: water[:start_temp],
+#     end_temp: water[:end_temp],
+#     temp_change: ->(){ calorimeter[:end_temp] - calorimeter[:start_temp] },
+#     energy_change: ->(){ calorimeter[:heat_capacity] * calorimeter[:temp_change][] }
+# }
+
+# total_heat = -(water[:energy_change][] + calorimeter[:energy_change][] )
+
+# puts C15H16O2[:heat_per_gram][]  * C15H16O2[:grams_per_mol]
+
+def vaporization(which_molecule: nil, grams_of_liquid: nil, moles_of_liquid: nil, heat_vaporization: nil)
+    # if "__ are-needed?" then answer is positive
+    if moles_of_liquid == nil
+        moles_of_liquid =  grams_of_liquid / which_molecule.grams_per_mole
+    end
+    # probably used in more complicated situation:
+    #     boiling_point 
+    #     specific_heat_of_liquid
+    #     pressure = 1 atm
+    
+    return heat_vaporization * moles_of_liquid
+    # example: vaporization(which_molecule: C*5+H*12, grams_of_liquid: 33.8, heat_vaporization: 25.8 )
+end
+
+def melt(which_molecule: nil, grams_of_solid: nil, moles_of_solid: nil, heat_fusion: nil)
+    if moles_of_solid == nil
+        moles_of_solid =  grams_of_solid / which_molecule.grams_per_mole
+    end
+    
+    return heat_fusion * moles_of_solid
+end
+
+# puts melt(which_molecule: Pb, grams_of_solid: 45.5, heat_fusion: 4.77)
+
+
+def change_in_entropy_of_surroundings(reactants:[], products:[], moles_of_reactant: nil)
+    reactants.map{|each| each.quantity }
+    change standard_enthalpies_of_products.sum - standard_enthalpies_of_reactants.sum
+end
+
+c2h6 = -84.7
+co2 = -393.5
+h2o_gas = -241.8
+h2o2 = -187.8
+no2 = 33.2
+hcl_gas = -92.30
+icl = 17.8
+i2 = 62.4
+nh4cl= -299.7
+nh3_gas = -46.1
+hcl_aqueous = -167.2
+co_gas = -110.5
+h2 = 0
+fe3o4 = -1118.4
+fe2o3 = -824.2
+
+moles = (10.1.grams / (C+O*2).grams_per_mole)
+puts moles * 41.2
+
+
+# calculate the molar heat of combustion
+# In an experiment, a 0.4419 g sample of bisphenol A (C15H16O2) is burned completely in a bomb calorimeter. The calorimeter is surrounded by 1.361×103 g of water. During the combustion the temperature increases from 27.04 to 29.44 °C. The heat capacity of water is 4.184 J g-1°C-1.
+# The heat capacity of the calorimeter was determined in a previous experiment to be 865.6 J/°C.
+# Assuming that no energy is lost to the surroundings, calculate the molar heat of combustion of bisphenol A based on these data.
+# C15H16O2(s) + 18O2(g)  8 H2O(l) + 15 CO2(g) + Energy
+
+
+
+# In an experiment, a 0.3515 g sample of azulene (C10H8) is burned completely in a bomb calorimeter. The calorimeter is surrounded by 1.093×103 g of water. 
+# During the combustion the temperature increases from 22.41 to 24.99 °C. The heat capacity of water is 4.184 J g-1°C-1.
+
+# The heat capacity of the calorimeter was determined in a previous experiment to be 867.0 J/°C.
+
+total_heat = nil
+
+C15H16O2 = {
+    mass: 0.3515,
+    grams_per_mol: (C*10 + H*8).grams_per_mole,
+    molar_heat: :unknown,
+    heat_per_gram: ->() { (total_heat / C15H16O2[:mass]) /1000 }
+} 
+water = {
+    mass: 1.093*(10**3),
+    start_temp: 22.41,
+    end_temp: 24.99,
+    heat_capacity: 4.184,
+    temp_change: ->(){ water[:end_temp] - water[:start_temp] },
+    energy_change: ->() { water[:mass] * water[:heat_capacity] * water[:temp_change][] }
+}
+calorimeter = {
+    heat_capacity: 867.0,
+    start_temp: water[:start_temp],
+    end_temp: water[:end_temp],
+    temp_change: ->(){ calorimeter[:end_temp] - calorimeter[:start_temp] },
+    energy_change: ->(){ calorimeter[:heat_capacity] * calorimeter[:temp_change][] }
+}
+
+total_heat = -(water[:energy_change][] + calorimeter[:energy_change][] )
+puts "hi"
+puts C15H16O2[:heat_per_gram][]  * C15H16O2[:grams_per_mol]
