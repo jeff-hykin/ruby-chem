@@ -23,7 +23,6 @@ change_in_entropy = - change_in_enthalpy / temp
 
 gibbs = enthalpy - ( temp * joules )
 
+# calculate Kc
 
 
-In the laboratory a student finds that it takes 38.7 Joules to increase the temperature of 13.0 grams of solid silver from 24.2 to 37.6 degrees Celsius.
-38.7 = 13.0 * x * (-24.2 + 37.6)

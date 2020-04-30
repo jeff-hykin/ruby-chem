@@ -1,5 +1,5 @@
 require_relative "./units.rb"
-
+require 'json'
 # BrINClHOF  # diatomic molecules
 
 Avogadro = 6.02214076*10**23
@@ -84,6 +84,24 @@ class Molecule
             return :ionic
         end
     end
+    
+    def to_json()
+        stuff = {}
+        stuff["weight"] = self.weight.to_f
+        stuff["valenceElectrons"] = self.valence_electrons
+        stuff["isMetal"] = self.is_a_metal? if self.respond_to?(:is_a_metal?)
+        stuff["isNonMetal"] = self.is_a_non_metal? if self.respond_to?(:is_a_non_metal?)
+        stuff["classification"] = self.classification if self.respond_to?(:classification)
+        stuff["electronegativity"] = self.info_hash["electronegativity"] if self.respond_to?(:info_hash)
+        begin
+            stuff["bondType"] = self.bond_type
+        rescue => exception
+        end
+        if self.respond_to?(:symbol) && ["Br","I","N","Cl","H","O","F"].include?(self.symbol) 
+            stuff["diatomic"] = true
+        end
+        return stuff.to_json
+    end
 end
 
 
@@ -140,7 +158,7 @@ class Compound < Molecule
 end
 
 class Element < Molecule
-    attr_accessor :quantity, :charge, :info_hash
+    attr_accessor :quantity, :charge, :info_hash, :symbol
     
     # TODO:
     #   ion
@@ -190,7 +208,7 @@ class Element < Molecule
     end
     
     def weight()
-        return (@info_hash["mass"] * @quantity).grams/1.mol
+        return (@info_hash["mass"] * @quantity)
     end
     alias grams_per_mole weight
     
