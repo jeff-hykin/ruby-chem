@@ -196,11 +196,11 @@ class Element < Molecule
     end
     
     def is_a_metal?()
-        ['alkaili_metal', 'alkaline_earth_metal','post_transition_metal', 'transition_metal'].include?(self.classification)
+        ['alkaili_metal', 'alkaline_earth_metal','post_transition_metal', 'transition_metal'].include?(self.classification.to_s)
     end
     
     def is_a_non_metal?()
-        self.classification == 'non_metal'
+        self.classification.to_s == 'non_metal'
     end
     
     def sub_elements
